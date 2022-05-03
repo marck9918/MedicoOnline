@@ -21,9 +21,15 @@ def keyboard(input):
         elif keyboard[0] == 'lista_malattie':
             print(Problog.listaMalattie())
         elif keyboard[0] == 'sintomi':
-            print(Problog.sintomi(keyboard[1]))
+            if(len(keyboard) == 2):
+                print(Problog.sintomi(keyboard[1]))
+            else:
+                print("Inserire il nome della malattia")
         elif keyboard[0] == 'lista_sintomi':
-            print(Problog.probMalattia(keyboard[1]))
+            if(len(keyboard) == 2):
+                print(Problog.probMalattia(keyboard[1]))
+            else:
+                print("Inserire la lista dei sintomi o il sintomo che si sente")
         elif keyboard[0] == 'exit':
             return
         else:
